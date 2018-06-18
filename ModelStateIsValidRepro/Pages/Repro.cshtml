@@ -1,0 +1,19 @@
+﻿@page
+@model ModelStateIsValidRepro.Pages.ReproModel
+@{
+    ViewData["Title"] = "Repro";
+}
+
+<h2>Repro</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="TestProperty"></label>
+        <input asp-for="TestProperty" class="form-control"/>
+        <span asp-validation-for="TestProperty" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+</form>
